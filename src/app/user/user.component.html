@@ -1,0 +1,10 @@
+<p>雙向綁定</p>
+<input type="text" [(ngModel)]="name">
+<p>事件綁定：當輸入完畢</p>
+<input type="text" (keyup)="onUserInput($event)">
+<p>事件綁定：當點擊2下</p>
+<input type="text" (dblclick)="onUserInput($event)">
+<p>雙向綁定輸出：{{ name }}</p>
+<p>事件綁定輸出： {{ eventName }}</p>
+
+<p>I'm the user component</p>
