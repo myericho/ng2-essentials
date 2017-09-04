@@ -17,5 +17,6 @@
     <h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>
   </li>
 </ul>
-<app-user [name] = "'test'"></app-user>
+
+<app-user [inputName]='rootName' (nameChange)='onNameChange($event)'></app-user>
 <router-outlet></router-outlet>

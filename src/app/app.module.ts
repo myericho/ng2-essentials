@@ -18,4 +18,7 @@ import { UserComponent } from './user/user.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+
+ }

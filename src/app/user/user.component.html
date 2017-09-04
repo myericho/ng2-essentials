@@ -1,10 +1,48 @@
-<p>雙向綁定</p>
-<input type="text" [(ngModel)]="name">
-<p>事件綁定：當輸入完畢</p>
-<input type="text" (keyup)="onUserInput($event)">
-<p>事件綁定：當點擊2下</p>
-<input type="text" (dblclick)="onUserInput($event)">
-<p>雙向綁定輸出：{{ name }}</p>
-<p>事件綁定輸出： {{ eventName }}</p>
+<table>
+  <tr>
+    <td>
+      <p>雙向綁定</p>
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="name">
+    </td>
+    <td>
+      <p>雙向綁定輸出：{{ name }}</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>事件綁定：當輸入完畢 </p>
+    </td>
+    <td>
+      <input type="text" (keyup)="onUserInput($event)">
+    </td>
+    <td>
+      <p>雙向綁定輸出：{{ eventName }}</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>事件綁定：當點擊2下 </p>
+    </td>
+    <td>
+      <input type="text" (dblclick)="onUserDbClick($event)">
+    </td>
+    <td>
+      <p>雙向綁定輸出：{{ dbClickName }}</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>外部物件，由AppComponent輸入 </p>
+    </td>
+    <td>
+      <input type="text" (input)='onUserOutPutEvent($event)' [value]='inputName' >
+    </td>
+    <td>
+      <p>外部事件對應：{{ inputName }}</p>
+    </td>
+  </tr>
 
-<p>I'm the user component</p>
+
+</table>
