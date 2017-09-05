@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { random } from 'lodash';
+// declare var _: any;
+
 
 @Component({
   selector: 'app-root',
@@ -16,12 +19,12 @@ export class AppComponent {
   onNameChange(newName) {
     this.rootName = newName;
   }
- /**
-  * 數值不會改變，因預設為0
-  * 練習用chrome看web pack 及 augury 擴充套件看程式運行
-  */
+  /**
+   * 數值不會改變，因預設為0
+   * 練習用chrome看web pack 及 augury 擴充套件看程式運行
+   */
   onIncrease() {
-    this.number = this.number * 2;
+    this.number = random(1, 10);
   }
 
 }
