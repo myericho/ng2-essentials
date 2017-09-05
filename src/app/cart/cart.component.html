@@ -1,0 +1,6 @@
+<input type="text" [(ngModel)]="newItem"> ngClass變化，當輸入為空按鈕為default，有值變色
+<button (click)="onAddItem()" class="btn" [ngClass]="{'btn-primary':newItem !== '','btn-default':newItem === ''}">Add Item</button>
+<hr>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let item of items; let i = index" [ngStyle]="{backgroundColor:i % 2===0?'yellow':'blue'}">{{ item }}</li>
+</ul>

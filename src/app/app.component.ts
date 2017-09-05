@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// 直接用，會自動對應參考 node_modules 下的lib
 import { random } from 'lodash';
 // declare var _: any;
 
@@ -12,6 +13,13 @@ export class AppComponent {
   title = 'app';
   rootName = '值在app設定中賦予的';
   number = 0;
+
+  rootItems = ['Apples', 'Bananas', 'Cherries'];
+  onItemWasAdded(newItem) {
+    this.rootItems.push(newItem);
+    console.log(this.rootItems);
+  }
+
   /**
    * 值由user.component改變，再傳回到app.component中
    * @param newName
@@ -26,5 +34,9 @@ export class AppComponent {
   onIncrease() {
     this.number = random(1, 10);
   }
+
+
+
+
 
 }

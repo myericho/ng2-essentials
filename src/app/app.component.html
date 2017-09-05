@@ -9,7 +9,14 @@
 
 <app-user [inputName]='rootName' (nameChange)='onNameChange($event)'></app-user>
 <!-- <app-cart></app-cart> -->
-<p>{{ number }}</p>
+<hr>
+<h1>*載入lodash library，點擊亂數產生</h1>
+<h2>{{ number }}</h2>
 <button (click)="onIncrease()" class="btn btn-primary">Increase number</button>
+<hr>
+<h1>Directives</h1>
+<hr>
 
+<h1>*ngFor功能展示</h1>
+<app-cart [items]="rootItems" (itemAdded)="onItemWasAdded($event)"></app-cart>
 <router-outlet></router-outlet>
